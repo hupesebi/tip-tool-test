@@ -46,11 +46,12 @@ describe("Payment test", function() {
       let table = document.querySelector("#paymentTable tbody").querySelectorAll("tr, td");
       
       //console.log (table)
-      expect (table.length).toEqual(4);
+      expect (table.length).toEqual(5);
       expect (table[0].id).toEqual("payment0");
       expect (table[1].innerHTML).toEqual("$10");
       expect (table[2].innerHTML).toEqual("$1");
       expect (table[3].innerHTML).toEqual("10%");
+      expect (table[4].innerHTML).toEqual("X");
       
     });
 

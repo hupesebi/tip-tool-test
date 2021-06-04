@@ -23,10 +23,11 @@ describe("Servers test", function() {
     let table = document.querySelector("#serverTable tbody").querySelectorAll("tr, td");
     
     console.log (table)
-    expect (table.length).toEqual(3);
+    expect (table.length).toEqual(4);
     expect (table[0].id).toEqual("server1");
     expect (table[1].innerHTML).toEqual("Alice");
     expect (table[2].innerHTML).toEqual("$0.00");
+    expect (table[3].innerHTML).toEqual("X");
     
   });
     
