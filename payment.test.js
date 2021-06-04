@@ -1,6 +1,5 @@
 describe("Payment test", function() {
     beforeEach(function () {
-      // initialization logic
       billAmtInput.value = 10;
       tipAmtInput.value = 1;
     });
@@ -55,7 +54,13 @@ describe("Payment test", function() {
       
     });
 
- 
+        it ('should update the table with the id of paymentTable on appendPaymentTable()', function(){
+          submitPaymentInfo();
+          expect (summaryTds[0].innerHTML).toEqual('$10');
+          expect (summaryTds[1].innerHTML).toEqual('$1');
+          expect (summaryTds[2].innerHTML).toEqual('10%');
+          
+        });
       
     afterEach(function() {
         billAmtInput.value = '';
